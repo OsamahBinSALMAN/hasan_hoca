@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 # Load trained models
 models = {
-    "Linear Regression": joblib.load("linear_regression.pkl"),
-    "MLP": joblib.load("mlp.pkl"),
-    "Random Forest": joblib.load("random_forest.pkl")
+    "Linear Regression": joblib.load("Linear_Regression_model.pkl"),
+    "MLP": joblib.load("MLP_model.pkl"),
+    "Random Forest": joblib.load("Random_Forest_model.pkl")
 }
 
 @app.route("/predict", methods=["POST"])
