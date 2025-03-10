@@ -29,7 +29,7 @@ def predict():
             return jsonify({"error": "Invalid model selection"}), 400
 
         model = models[model_name]
-        X_input = np.array([[min_temp, max_temp]])  # Ensure input shape matches training
+        X_input = np.array([[min_temp, max_temp,class_value]])  # Ensure input shape matches training
 
         prediction = model.predict(X_input)[0]
 
